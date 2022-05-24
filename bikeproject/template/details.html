@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class ="col-md-6">
+        <img src="{{bike.image.url}}" width="300" height="300">
+    </div>
+ <div class="col-md-6">
+     <h5>{{bike.name}}</h5>
+     <h4>{{bike.description}}</h4>
+     <h5>{{bike.year}}</h5>
+
+<a class="btn btn-warning" href="{% url 'bikeapp:update' bike.id %}">update</a>
+<a class="btn btn-danger" href="{% url 'bikeapp:delete' bike.id %}">delete</a>
+ </div>
+
+
+   </div>
+</div>
+{% endblock %}
